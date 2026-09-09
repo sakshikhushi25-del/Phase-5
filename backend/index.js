@@ -53,6 +53,10 @@ async function getGeminiAnswer(question) {
     }
 }
 
+app.get("/", (req, res) => {
+    res.send("Ask Gemini Application is running")
+})
+
 app.post("/ask", async (req, res) => {
     try {
         const { question } = req.body;
